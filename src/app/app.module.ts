@@ -13,6 +13,9 @@ import { HomeComponent } from './layout/home/home.component';
 
 
 import { httpInterceptorProviders } from './http-interceptors';
+import {MatTableModule} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TablesComponent } from './layout/home/components/tables/tables.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,18 @@ import { httpInterceptorProviders } from './http-interceptors';
     LoginComponent,
     CreateAccountComponent,
     AuthenticationComponent,
-    HomeComponent
+    HomeComponent,
+    TablesComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatTableModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [
     httpInterceptorProviders
