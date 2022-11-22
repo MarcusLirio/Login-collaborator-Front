@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    margin:0;
+    padding: 0;
+}
+
+form 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+form .form-group input
+{
+  width: 50vh;
+  background-color: #fff;
+  border: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 8px;
+}
+
+form .button
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+form .button button
+{
+    margin-top: 5px;
+    width: 25vh;
+}
+
+form .button button:hover
+{
+    background-color: black;
+    color: #fff;
+}
