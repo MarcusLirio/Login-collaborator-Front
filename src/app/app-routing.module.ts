@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CreateAccountComponent } from './account/create-account/create-account.component';
-import { LoginComponent } from './account/login/login.component';
-import { AdminComponent } from './layout/home/admin/admin.component';
-import { HomeComponent } from './layout/home/home.component';
+import { RouterModule } from '@angular/router';
+import { AuthModule } from './auth/auth.module';
+import { LayoutComponent } from './layout/layout.component';
 
-const routes: Routes = [
-  {path:'', component: LoginComponent},
-  {path:'create-account', component: CreateAccountComponent},
-  {path:'home', component: HomeComponent},
-  {path: 'admin', component: AdminComponent}
-];
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot([
+    {
+      path: '', component: LayoutComponent,
+      children: [
+        {path: '', loadChildren: () => import('./layout/components/table/table.module').then((m) => m.TableModule)}
+      ]
+    },
+    {path: 'auth', loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule)}
+  ])],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
