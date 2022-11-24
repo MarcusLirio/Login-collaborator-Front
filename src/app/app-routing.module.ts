@@ -1,19 +1,22 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { AuthModule } from './auth/auth.module';
 import { LayoutComponent } from './layout/layout.component';
 
 
 
 @NgModule({
-  imports: [RouterModule.forRoot([
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
     {
       path: '', component: LayoutComponent,
-      children: [
-        {path: '', loadChildren: () => import('./layout/components/table/table.module').then((m) => m.TableModule)}
-      ]
     },
-    {path: 'auth', loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule)}
+    {path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)}
   ])],
   exports: [RouterModule]
 })

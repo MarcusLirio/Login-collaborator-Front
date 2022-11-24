@@ -3,12 +3,11 @@ import { DadosDev } from '../../../models/users/dadosDev.model';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({
-  selector: 'app-tables',
-  templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css']
+  selector: 'table',
+  templateUrl: './table.component.html',
 
 })
-export class TablesComponent implements AfterViewInit {
+export class TableComponent implements AfterViewInit {
 
   dados!: DadosDev[];
 
