@@ -21,11 +21,12 @@ export class CreateAccountComponent implements OnInit {
   }
 
   async onSubmit() {
-    try {
-      const result = await this.accountService.createAccount(this.account);
-      this.router.navigate(['/auth/login'])
-    } catch (error) {
-      console.error(error);
-    }
+   if(!this.account) {
+    alert('Não cadastrou')
+  }
+  else {
+    await this.accountService.createAccount(this.account);
+    this.router.navigate(['/auth/login'])
+   }
   }
 }

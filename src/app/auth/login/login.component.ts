@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   async onSubmit() {
     try {
-      if(this.login.username == 'admim'){
+      if(this.login.username == 'admin'){
         const result = await this.accountService.login(this.login);
         console.log(`Login efetuado: ${result}`);
         this.router.navigate(['/admin']);
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       }else{
         const result = await this.accountService.login(this.login);
         console.log(`Login efetuado: ${result}`);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/page']);
       }
     } catch (error) {
       console.error(error);

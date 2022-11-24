@@ -4,6 +4,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginRoutingModule } from './login/login-routing.module';
 import { CreateAccountRoutingModule } from './create-account/create-account-routing.module';
 import { AuthComponent } from './auth.component';
+import { HeaderComponent } from '../layout/components/header/header.component';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { AuthComponent } from './auth.component';
   ],
   bootstrap: [AuthComponent],
   declarations: [
-    AuthComponent
+    AuthComponent,
   ]
 })
 export class AuthModule { }

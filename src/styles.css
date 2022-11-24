@@ -49,6 +49,34 @@ form .button button:hover
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-table {
-    height: 100%;
+header
+{
+    background-color: #00ABB3;
+    height: 8vh;
+}
+
+header button
+{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+table 
+{
+    margin-top: 10px;
+}
+
+mat-drawer-content button
+{
+    margin: 5px;
+}
+
+mat-drawer ul
+{
+    list-style: none;
+}
+
+mat-drawer ul li button
+{
+    margin: 5px;
 }

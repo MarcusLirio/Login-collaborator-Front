@@ -3,7 +3,7 @@ import { DadosDev } from '../../../models/users/dadosDev.model';
 import { TableService } from 'src/app/services/table.service';
 
 @Component({
-  selector: 'table',
+  selector: 'table-devs',
   templateUrl: './table.component.html',
 
 })
@@ -23,6 +23,7 @@ export class TableComponent implements AfterViewInit {
     this.dados = await this.api.getUsers().then((x) => {
       return x
     })
+    console.log(this.dados)
   }
 }
 
