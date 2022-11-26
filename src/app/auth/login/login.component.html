@@ -1,6 +1,6 @@
 <div class="container">
   <form (ngSubmit)="onSubmit()" #form="ngForm">
-    <h2 class="text-center">Entrar</h2>
+    <h1 class="text-center">Entrar</h1>
     <div class="form-group">
       <input class="form-control" type="email" name="email" id="email" [(ngModel)]="login.username"  placeholder="Username" required />
     </div>
@@ -9,7 +9,7 @@
     </div>
     <div class="button">
       <button type="submit" class="btn btn-primary btn-block" [disabled]="form.form.invalid">Entrar</button>
-      <button type="button" class="btn btn-primary btn-block" [routerLink]="['/auth/create-account']">Criar conta</button>
+      <button type="button" class="btn btn-primary btn-block" [routerLink]="['/create-account']">Criar conta</button>
     </div>
   </form>
 </div>

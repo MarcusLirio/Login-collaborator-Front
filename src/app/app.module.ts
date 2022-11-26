@@ -9,10 +9,12 @@ import { TableService } from './services/table.service';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/components/header/header.component';
 import { TableComponent } from './layout/components/table/table.component';
+import { AdminComponent } from './layout/admin/admin.component';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { AdminComponent } from './layout/admin/admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { AdminComponent } from './layout/admin/admin.component';
   imports: [
     AppRoutingModule,
     MatTableModule,
-    MatSidenavModule
+    MatSidenavModule,
+    BrowserAnimationsModule,
   ],  
   providers: [
     httpInterceptorProviders,

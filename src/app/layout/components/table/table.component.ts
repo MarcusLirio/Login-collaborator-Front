@@ -11,7 +11,9 @@ export class TableComponent implements AfterViewInit {
 
   dados!: DadosDev[];
 
-  displayedColumns: string[] = ['id', 'name', 'email', 'cpf', 'cnpj', 'sexo', 'celular', 'datanascimento', 'skype', 'senha', 'dadosbancarios', 'ativo', 'datainicio', 'datadesligamento', 'datadesligamento', 'image'];
+  
+
+  displayedColumns: string[] = ['id', 'name', 'email', 'cpf', 'cnpj', 'sexo', 'celular', 'datanascimento', 'skype', 'senha', 'dadosbancarios', 'ativo', 'datainicio', 'datadesligamento', 'datadesligamento', 'image', 'acoes'];
 
   constructor(
     private api: TableService
@@ -24,6 +26,10 @@ export class TableComponent implements AfterViewInit {
       return x
     })
     console.log(this.dados)
+  }
+
+  edit(){
+    document.getElementById('')
   }
 }
 

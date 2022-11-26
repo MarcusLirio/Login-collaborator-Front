@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { CreateAccountComponent } from './create-account.component';
 import { CreateAccountRoutingModule } from './create-account-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from 'src/app/layout/components/header/header.component';
 
 @NgModule({
   declarations:[

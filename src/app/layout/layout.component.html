@@ -1,22 +1,2 @@
 <app-header></app-header>
-
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-        <ul>
-            <li>
-                <button type="button" class="btn btn-dark">Table</button>      
-            </li>
-            <li>
-                <button type="button" class="btn btn-dark">Other Table</button>      
-            </li>
-        </ul>
-    </mat-drawer>
-  
-    <div class="example-sidenav-content">
-          <button type="button" class="btn btn-outline-dark bi bi-list" mat-button (click)="drawer.toggle()" style="border: none;"></button>
-        <div class="container">
-            <table-devs></table-devs>
-        </div>
-    </div>
-  
-  </mat-drawer-container>
+<table-devs></table-devs>

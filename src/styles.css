@@ -2,7 +2,14 @@
 html, body {
     margin:0;
     padding: 0;
+    height:100vh;
 }
+
+:root 
+{
+    --primary-blue: #0066ff;
+}
+
 
 form 
 {
@@ -12,6 +19,13 @@ form
     align-items: center;
     justify-content: center;
     margin-top: 10vh;
+}
+
+form h1, h2
+{
+    font-size: 40px !important;
+    font-weight: bold !important;
+    color: var(--primary-blue);
 }
 
 form .form-group input
@@ -31,12 +45,12 @@ form .button
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 form .button button
 {
-    margin-top: 5px;
+    margin-top: 10px;
     width: 25vh;
 }
 
@@ -48,35 +62,3 @@ form .button button:hover
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-header
-{
-    background-color: #00ABB3;
-    height: 8vh;
-}
-
-header button
-{
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-table 
-{
-    margin-top: 10px;
-}
-
-mat-drawer-content button
-{
-    margin: 5px;
-}
-
-mat-drawer ul
-{
-    list-style: none;
-}
-
-mat-drawer ul li button
-{
-    margin: 5px;
-}
