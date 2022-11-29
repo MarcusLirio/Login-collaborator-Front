@@ -14,6 +14,7 @@ import { AdminComponent } from './layout/admin/admin.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTableModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-  ],  
+    TableModule
+  ],
   providers: [
     httpInterceptorProviders,
     AuthGuard,
